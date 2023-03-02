@@ -401,8 +401,7 @@ p {
 
 .menu-entete-container {
   flex: 1;
-  background-color: wheat;
-  border-radius: 10px;
+  background-color: #ffa600;
 }
 .menu-entete-container .menu {
   display: flex;
@@ -420,7 +419,7 @@ p {
   color: #555;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: tomato;
+  color: blue;
 }
 @media screen and (max-width: 800px) {
   .menu-entete-container .menu {
@@ -441,6 +440,11 @@ p {
   flex: 1 0 300px;
   background-color: aliceblue;
   text-align: center;
+}
+
+.blocflex article:hover {
+  border: 3px solid #aaa;
+  background-color: rgb(147, 199, 245);
 }
 
 .recherche article {

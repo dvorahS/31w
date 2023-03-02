@@ -16,20 +16,23 @@
   }
 
   .site__aside{
-    grid-area : aside;
+    grid-area : aside; /* on ne doit pas mettre de guillemet */
     background-color: rgb(191, 220, 238);
   }
 
   /* body ou  ou un con globale */
+  /* configuration mobile */
   .site {
     display: grid;
     grid-template-columns: auto;
-    grid-template-areas:
+    grid-template-areas: /* permet de gagner du temps */
       "header"
       "aside"
       "main"
       "footer";
     row-gap: 50px;
+
+    /* config desktop sur 2 colonnes */
     @media screen and (min-width: 1000px) {
       grid-template-columns: 30% auto;
       color: black;

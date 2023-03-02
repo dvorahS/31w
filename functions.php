@@ -1,10 +1,11 @@
 <?php
 // Enfiler la feuille de style
-function ajouter_styles() {
-    wp_enqueue_style('31w-style-principal', // id de la feuille de style
-                get_template_directory_uri() . '/style.css', // adresse url de la feuille de style
-                array(), // les dépendances avec les autres feuilles de style
-                filemtime(get_template_directory() . '/style.css')); // la de la dernière feuille de style
+function ajouter_styles() 
+{
+    wp_enqueue_style('31w-style-principal',                             // id de la feuille de style
+                get_template_directory_uri() . '/style.css',            // adresse url de la feuille de style
+                array(),                                                // les dépendances avec les autres feuilles de style
+                filemtime(get_template_directory() . '/style.css'));    // la de la dernière feuille de style
 }
 add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
 
@@ -42,15 +43,20 @@ add_theme_support( 'custom-logo',
  */
 
 
-function cidweb_modifie_requete_principal( $query ) {
-    if ( $query->is_home()  //si pafe d'accueil
-    && $query->is_main_query() //si requête principale
-    && ! is_admin() ) {     //si pas dans l'admin
+function cidweb_modifie_requete_principal( $query ) 
+{
+    if ( $query->is_home()      //si pafe d'accueil
+    && $query->is_main_query()  //si requête principale
+    && ! is_admin() ) 
+    {     //si pas dans l'admin
       $query->set( 'category_name', 'note-wordpress' ); // on filtre par catégorie << note-wp >>
-      $query->set( 'orderby', 'title' );        // on trie par titre
-      $query->set( 'order', 'ASC' );           // dans l'ordre croissant
-      }
-     }
+      $query->set( 'orderby', 'title' );                // on trie par titre
+      $query->set( 'order', 'ASC' );                    // dans l'ordre croissant
+    }
+}
 
      add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );  
+
+
+?>
                    

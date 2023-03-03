@@ -1,4 +1,4 @@
-# TP1
+# TP_1
 ## ameliorer la structure generale de theme
 ### Auteur: Simantob Déborah
 #### Objectifs du TP1 :

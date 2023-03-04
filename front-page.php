@@ -9,14 +9,9 @@ get_header() ?>
     <section class="blocflex">
         <?php 
         if (have_posts()):
-            while (have_posts()) : the_post();
-                //the_title('<h1>','</h1>');
-                //the_permalink(); ?>
-                <?php get_template_part('template-parts/categorie', 'note-wp'); ?>
-                <article>
-                    <h3><a href="<?php the_permalink(); ?>"><?= get_the_title();  ?> </a></h3>
-                    <p><?php  echo wp_trim_words(get_the_excerpt(), 4); ?></p>
-                </article>
+            while (have_posts()) : the_post(); ?>
+                <?php get_template_part("template-parts/categorie", "note-wp");?>
+                <!-- liste des notes de cours -->
             <?php endwhile; ?>
         <?php endif; ?>   
     </section>

@@ -15,7 +15,9 @@ get_header() ?>
       $query = new WP_Query( $args ); /* WP_Query permet de regenerer une nouvelle requete */
       if ( $query->have_posts() ) :
          while ( $query->have_posts() ) : $query->the_post(); ?>
-            <?php get_template_part("template-parts/categorie", $category->slug); ?> <!--on va chercher le template -->
+            <?php get_template_part("template-parts/categorie", $category->slug); ?> 
+            <!--on récupère la categorie avec $category->slug -->
+            <!--on va chercher le template -->
             <?php //get_template_part('template-parts/categorie', $category->slug); ?>
          <?php endwhile; ?>
       <?php endif;

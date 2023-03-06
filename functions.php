@@ -49,7 +49,7 @@ function cidweb_modifie_requete_principal( $query )
     && $query->is_main_query()  //si requête principale
     && ! is_admin() ) 
     {     //si pas dans l'admin
-      $query->set( 'category_name', 'note-wordpress' ); // on filtre par catégorie << note-wp >>
+      $query->set( 'category_name', 'note-wp' ); // on filtre par catégorie << note-wp >>
       $query->set( 'orderby', 'title' );                // on trie par titre
       $query->set( 'order', 'ASC' );                    // dans l'ordre croissant
     }

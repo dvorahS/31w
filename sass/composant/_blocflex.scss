@@ -1,8 +1,10 @@
-.blocflex{
+.blocflex
+{
     display : flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    article {
+    article 
+    {
         margin : 10px;
         padding : 5px;
         border : 1px solid #aaa;
@@ -11,7 +13,12 @@
        text-align: center;
     }
 }
-.blocflex article:hover{
+.blocflex article:hover
+{
     border : 3px solid #aaa;
     background-color: rgb(147, 199, 245);
+}
+.blocflex__galerie 
+{
+    flex: 1 0 100%;
 }

@@ -44,3 +44,23 @@
     }
         
     } 
+
+/* configuration à une seule colonne.  mdoifie le front-page */
+    .no-aside{
+      grid-template-areas: /* permet de gagner du temps */
+        "header"
+        "main"
+        "footer";
+      row-gap: 50px;
+
+      /* config desktop sur 2 colonnes */
+      @media screen and (min-width: 1000px) {
+        grid-template-columns: auto;
+        color: black;
+        
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+      }
+    }

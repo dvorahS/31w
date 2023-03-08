@@ -494,4 +494,18 @@ p {
     color: black;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
+}
+
+/* configuration à une seule colonne.  mdoifie le front-page */
+.no-aside {
+  grid-template-areas: "header" "main" "footer";
+  row-gap: 50px;
+  /* config desktop sur 2 colonnes */
+}
+@media screen and (min-width: 1000px) {
+  .no-aside {
+    grid-template-columns: auto;
+    color: black;
+    grid-template-areas: "header" "main" "footer";
+  }
 }/*# sourceMappingURL=style.css.map */

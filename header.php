@@ -7,8 +7,9 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-<body class="site">
 
+<!-- si on se retourve dans le front-page on ajoute le no-aside - condition ternaire-->
+<body class="site <?=(is_front_page() ? "no-aside" : ""); ?>">
     <header class="site__entete">  
         <section class="logomenu">
             <?php the_custom_logo(); ?> 
@@ -23,8 +24,14 @@
         <h1><a href="<?php  bloginfo('url'); ?>"><?php  bloginfo('name'); ?></a></h1> 
         <h2><?php  bloginfo('description'); ?></h2>
     </header>
-    
-    <?php get_template_part("template-parts/aside"); ?>
+
+    <!-- si on est pas dans page d'accueil affiche le aside */
+    <?php 
+    if (is_front_page() == false)
+    {
+        get_template_part("template-parts/aside"); 
+    }
+    ?>
 
 
     

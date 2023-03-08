@@ -55,7 +55,26 @@ function cidweb_modifie_requete_principal( $query )
     }
 }
 
+/**
+ * PERMET DE MODIFIER LES TITRES DU MENU COURS
+ * @param $title : titre du choix menu
+ * @param $item : choix global
+ * @param $args : objet qui represente la structure du menu
+ */
      add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );  
+
+     function perso_menu_item_title($title, $item, $args) 
+     {
+        // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+        if($args->menu == 'cours') 
+        {
+        // Modifier la longueur du titre en fonction de vos besoins
+        $title = wp_trim_words($title, 3, ' ... '); /* va chercher les 3 premiers mots */
+        }
+        return $title;
+    }
+    /* ecouteur de hook */
+    add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 
 
 ?>

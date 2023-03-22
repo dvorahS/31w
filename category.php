@@ -1,6 +1,6 @@
 <?php
 /**
-    Modèle category.php représente permet d'afficher une archive par categorie d'article
+    Modèle category.php permet d'afficher une archive par catégorie d'article
 */
 get_header() ?>
 <main class="site__main">
@@ -12,13 +12,10 @@ get_header() ?>
          'orderby' => 'title',
          'order' => 'ASC'
       );
-      $query = new WP_Query( $args ); /* WP_Query permet de regenerer une nouvelle requete */
+      $query = new WP_Query( $args );
       if ( $query->have_posts() ) :
          while ( $query->have_posts() ) : $query->the_post(); ?>
-            <?php get_template_part("template-parts/categorie", $category->slug); ?> 
-            <!--on récupère la categorie avec $category->slug -->
-            <!--on va chercher le template -->
-            <?php //get_template_part('template-parts/categorie', $category->slug); ?>
+               <?php get_template_part("template-parts/categorie",$category->slug); ?>
          <?php endwhile; ?>
       <?php endif;
       wp_reset_postdata();?>

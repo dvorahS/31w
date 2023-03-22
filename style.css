@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
-Theme Name: 31w Deborah Simantob
-Theme URI: https://github.com/dvorahS
-Author: Deborah SImantob
+Theme Name: 31w Eddy Martin
+Theme URI: https://github.com/eddytuto
+Author: Eddy Martin
 Author URI: https://eddytuto.ca
 Description: Introductin à la création d'un thème Wordpress
 Version: 1.0
@@ -11,7 +11,7 @@ Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: 31w-deborah-simantob
+Text Domain: 31w-eddy-martin
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -99,7 +99,7 @@ abbr[title] {
 b,
 strong {
   font-weight: bolder;
-} /*test 03-03 10h54*/
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -385,47 +385,82 @@ p {
 }
 
 /* -------------------------- COMPOSANT */
-.site__entete {
-  box-sizing: border-box;
-  padding: 10px;
-}
-
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
-  gap: 10px;
-  padding: 0px 20px;
+}
+
+.menusearch {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1000px) {
+  .menusearch {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+  }
+}
+
+#chkBurger {
+  display: none;
+}
+
+#chkBurger:checked ~ .menu-entete-container {
+  transform: translateX(0);
+}
+
+.burger {
+  display: block;
+}
+@media screen and (min-width: 500px) {
+  .burger {
+    display: none;
+  }
 }
 
 .menu-entete-container {
-  flex: 1;
-  background-color: #ffa600;
+  transform: translateX(300px);
+  transition: transform 0.25s;
+}
+@media screen and (min-width: 500px) {
+  .menu-entete-container {
+    transform: translateX(0);
+  }
 }
 .menu-entete-container .menu {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  list-style: none;
-  text-decoration: none;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+@media screen and (min-width: 500px) {
+  .menu-entete-container .menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
 }
 .menu-entete-container .menu .menu-item a {
+  white-space: nowrap;
   padding: 3px 5px;
   color: #555;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: blue;
+  color: #0f0;
 }
-@media screen and (max-width: 800px) {
-  .menu-entete-container .menu {
-    flex-direction: column wrap;
-    text-decoration: none;
-  }
+
+.recherche {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .blocflex {
@@ -433,27 +468,52 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.blocflex article {
+
+.blocflex__article {
   margin: 10px;
   padding: 5px;
   border: 1px solid #aaa;
   flex: 1 0 300px;
-  background-color: aliceblue;
-  text-align: center;
 }
 
-.blocflex article:hover {
-  border: 3px solid #aaa;
-  background-color: rgb(147, 199, 245);
+.blocflex__galerie {
+  flex: 1 0 100%;
 }
 
-.recherche article {
-  background-color: wheat;
-  border-radius: 10px;
+.main__recherche article {
+  background-color: azure;
+  margin: 10px;
 }
 
-/* -------------------------- LAYOUt */
-/*    */
+.menu-cours-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-cours-container .menu .menu-item {
+  list-style-type: none;
+}
+.menu-cours-container .menu .menu-item a .cours__sigle {
+  padding: 3px;
+}
+.menu-cours-container .menu .menu-item a .cours__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu .menu-item a .cours__titre {
+    display: block;
+  }
+}
+
+/* -------------------------- LAYOUT */
+/**
+Mise en page avec display: grid
+*/
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
@@ -471,23 +531,33 @@ p {
 }
 
 .site__aside {
-  grid-area: aside; /* on ne doit pas mettre de guillemet */
-  background-color: rgb(191, 220, 238);
+  grid-area: aside;
+  background-color: rgb(47, 148, 210);
 }
 
-/* body ou  ou un con globale */
-/* configuration mobile */
+/* body ou un conteneur globale */
 .site {
+  width: 100vw;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
   row-gap: 50px;
-  /* config desktop sur 2 colonnes */
 }
 @media screen and (min-width: 1000px) {
   .site {
     grid-template-columns: 30% auto;
-    color: black;
     grid-template-areas: "header header" "aside main" "footer footer";
+  }
+}
+
+.no-aside {
+  grid-template-areas: "header" "main" "footer";
+  row-gap: 50px;
+}
+@media screen and (min-width: 1000px) {
+  .no-aside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer";
   }
 }/*# sourceMappingURL=style.css.map */

@@ -2,16 +2,14 @@
     display : flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    article {
-        margin : 10px;
-        padding : 5px;
-        border : 1px solid #aaa;
-        flex: 1 0 300px;
-       background-color: aliceblue;
-       text-align: center;
-    }
 }
-.blocflex article:hover{
-    border : 3px solid #aaa;
-    background-color: rgb(147, 199, 245);
+
+.blocflex__article {
+    margin : 10px;
+    padding : 5px;
+    border : 1px solid #aaa;
+    flex: 1 0 300px;
+}
+.blocflex__galerie {
+    flex: 1 0 100%;
 }

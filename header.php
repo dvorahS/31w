@@ -7,39 +7,29 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-<body class="site">
-
+<body class="site <?= (is_front_page() ? "no-aside" : "");  ?> ">
     <header class="site__entete">  
         <section class="logomenu">
             <?php the_custom_logo(); ?> 
-            <?php wp_nav_menu(array(
-                'menu' => 'entete',
-                'container' => 'nav'
-            )); ?> 
-            <?= get_search_form(); ?>    
+            <div class="menusearch">
+                <input type="checkbox" id="chkBurger">
+                <?php wp_nav_menu(array(
+                    'menu' => 'entete',
+                    'container' => 'nav'
+                )); ?> 
+                <?= get_search_form(); ?>
+                <label for="chkBurger" class="burger">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+                </label>   
+            </div> 
         </section>
         <h1><a href="<?php  bloginfo('url'); ?>"><?php  bloginfo('name'); ?></a></h1> 
         <h2><?php  bloginfo('description'); ?></h2>
     </header>
-
-    <aside class="site__aside"> <!-- va s'executer ds chacune des page de notre wp, car c'est dans le header -->
-        
-        <h3>Menu secondaire</h3>
-        <?php 
-        $category = get_queried_object(); /* recup l'URL pour en faire un objet */
-        if(isset($category))
-        {
-            $lemenu = $category->slug;
-        }
-        else /* permet d'avoir une valeur par defaut pour le menu */
-        {
-            $lemenu = "note-wp";
-        }
-        /* permet d'afficher le menu des notes de cours */
-        wp_nav_menu(array
-        (
-            "menu" => $lemenu,
-            "container" => "nav"
-        )) ?>
-    </aside>
+    <?php 
+    if (is_front_page() == false)
+    {
+       get_template_part("template-parts/aside");
+    }
+     ?>
     

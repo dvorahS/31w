@@ -1,0 +1,12 @@
+.site__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_widget {
+  display: flex;
+  flex-direction: row;
+}
+.footer_widget div {
+  flex: 1 0 33%;
+}/*# sourceMappingURL=footer.css.map */

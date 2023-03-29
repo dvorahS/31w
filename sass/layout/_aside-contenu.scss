@@ -1,4 +1,7 @@
-/*    */
+/**
+Mise en page avec display: grid
+*/
+
 .site__entete {
     grid-area: header;
     padding: 1rem clamp(1rem, 3vw, 20rem);
@@ -15,32 +18,45 @@
     background-color: antiquewhite;
   }
 
-  .site__aside{
-    grid-area : aside; /* on ne doit pas mettre de guillemet */
-    background-color: rgb(191, 220, 238);
+  .site__aside {
+    grid-area: aside;
+    background-color: rgb(47, 148, 210);
   }
-
-  /* body ou  ou un con globale */
-  /* configuration mobile */
+/* body ou un conteneur globale */
   .site {
+    width : 100vw;
+    overflow-x :hidden;
     display: grid;
     grid-template-columns: auto;
-    grid-template-areas: /* permet de gagner du temps */
+    grid-template-areas:
       "header"
       "aside"
       "main"
       "footer";
     row-gap: 50px;
-
-    /* config desktop sur 2 colonnes */
     @media screen and (min-width: 1000px) {
       grid-template-columns: 30% auto;
-      color: black;
-      
       grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
+      "header header"
+      "aside main"
+      "footer footer";
     }
-        
-    } 
+  }
+
+  .no-aside {
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "aside2"
+      "footer";
+    row-gap: 50px;
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: auto;
+      grid-template-areas:
+      "header header"
+      "aside main"
+      "aside2 main"
+      "footer footer";
+    }
+  }

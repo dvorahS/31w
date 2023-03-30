@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
 Theme Name: 31w Eddy Martin
-Theme URI: https://github.com/eddytuto
+Theme URI: https://referenced.ca
 Author: Eddy Martin
-Author URI: https://eddytuto.ca
+Author URI: https://github.com/eddytuto
 Description: Introductin à la création d'un thème Wordpress
 Version: 1.0
 Requires at least: 6.1.1
@@ -80,7 +80,10 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent;
+  background-color: black;
+  color: white;
+  ;
+  
 }
 
 /**
@@ -146,6 +149,7 @@ sup {
  */
 img {
   border-style: none;
+  border-radius: 50%;
 }
 
 /* Forms
@@ -370,6 +374,7 @@ h1 {
 
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
   /*_ font-family: "Slackey", cursive; _*/
 }
 
@@ -382,6 +387,17 @@ h6 {
 
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+}
+ul {
+  color: white;
+}
+li{
+  color: white;
+}
+.invisible {
+  display: none;
 }
 
 /* -------------------------- COMPOSANT */
@@ -452,10 +468,11 @@ p {
 .menu-entete-container .menu .menu-item a {
   white-space: nowrap;
   padding: 3px 5px;
-  color: #555;
+  color: white;
+  background-color: black;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: #0f0;
+  color: lightgrey;
 }
 
 .recherche {
@@ -467,17 +484,23 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  
 }
 
 .blocflex__article {
   margin: 10px;
   padding: 5px;
-  border: 1px solid #aaa;
+  border: px solid #C0C0C0;
+  background-color: black;
   flex: 1 0 300px;
+  border-radius: 20%;
+  border-style: groove;
 }
 
 .blocflex__galerie {
   flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .main__recherche article {
@@ -485,29 +508,67 @@ p {
   margin: 10px;
 }
 
+.menu-note-wp-container,
+.menu-cours-container {
+  margin: 0;
+  display: flex;
+}
+.menu-note-wp-container .menu,
 .menu-cours-container .menu {
   display: flex;
+  flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu,
   .menu-cours-container .menu {
     flex-direction: column;
   }
 }
+.menu-note-wp-container .menu .menu-item,
 .menu-cours-container .menu .menu-item {
   list-style-type: none;
+  display: flex;
+  margin: 0;
 }
+.menu-note-wp-container .menu .menu-item a,
+.menu-cours-container .menu .menu-item a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  text-decoration: none;
+  font-variant: small-caps;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 3px 5px;
+}
+.menu-note-wp-container .menu .menu-item a .cours__sigle,
 .menu-cours-container .menu .menu-item a .cours__sigle {
-  padding: 3px;
+  padding: 1px 3px;
 }
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .cours__sigle,
+  .menu-cours-container .menu .menu-item a .cours__sigle {
+    padding: 5px;
+  }
+}
+.menu-note-wp-container .menu .menu-item a .cours__titre,
 .menu-cours-container .menu .menu-item a .cours__titre {
   display: none;
 }
 @media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .cours__titre,
   .menu-cours-container .menu .menu-item a .cours__titre {
     display: block;
+    margin: 0;
   }
+}
+.menu-note-wp-container .menu .menu-item a:hover,
+.menu-cours-container .menu .menu-item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .site__footer {
@@ -515,13 +576,14 @@ p {
   flex-direction: column;
 }
 
-.footer_widget {
+.footer__widget {
   display: flex;
   flex-direction: row;
 }
-.footer_widget div {
+.footer__widget div {
   flex: 1 0 33%;
 }
+
 .footer__lien {
   display: flex;
   flex-direction: row;
@@ -537,22 +599,25 @@ Mise en page avec display: grid
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: antiquewhite;
+  background-color: black;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  color: white;
+  background-color: black;
+ 
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: antiquewhite;
+  background-color: black;
 }
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(47, 148, 210);
+  background-color: black;
 }
 
 /* body ou un conteneur globale */
@@ -562,22 +627,20 @@ Mise en page avec display: grid
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
-  row-gap: 50px;
 }
 @media screen and (min-width: 1000px) {
   .site {
-    grid-template-columns: 30% auto;
+    grid-template-columns: 25% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
 }
 
 .no-aside {
-  grid-template-areas: "header" "aside" "main" "aside2" "footer";
-  row-gap: 50px;
+  grid-template-areas: "header" "main" "footer";
 }
 @media screen and (min-width: 1000px) {
   .no-aside {
     grid-template-columns: auto;
-    grid-template-areas: "header header" "aside main" "aside2 main" "footer footer";
+    grid-template-areas: "header" "main" "footer";
   }
-}/*# sourceMappingURL=style.css.map */
+}

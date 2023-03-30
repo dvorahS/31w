@@ -74,6 +74,9 @@ function perso_menu_item_title($title, $item, $args) {
     }
     return  $title ;
 }
+
+add_theme_support( 'post-thumbnails' );
+
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 
 

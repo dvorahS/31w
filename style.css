@@ -80,10 +80,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: black;
+  background-color:black;
   color: white;
-  ;
-  
 }
 
 /**
@@ -346,6 +344,7 @@ h1 {
 
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  color: white;
 }
 
 h3 {
@@ -374,8 +373,8 @@ h1 {
 
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: white;
   /*_ font-family: "Slackey", cursive; _*/
+  color: white;
 }
 
 h3,
@@ -384,18 +383,17 @@ h5,
 h6 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
-p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: white;
-  background-color: black;
-}
 ul {
   color: white;
 }
-li{
+li {
   color: white;
 }
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
 .invisible {
   display: none;
 }
@@ -467,9 +465,9 @@ li{
 }
 .menu-entete-container .menu .menu-item a {
   white-space: nowrap;
-  padding: 3px 5px;
+  padding: 6px 10px;
   color: white;
-  background-color: black;
+  font-size: 20px;
 }
 .menu-entete-container .menu .menu-item a:hover {
   color: lightgrey;
@@ -484,17 +482,20 @@ li{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
+  background-color: black;
 }
 
 .blocflex__article {
   margin: 10px;
   padding: 5px;
-  border: px solid #C0C0C0;
-  background-color: black;
+  border: 10px solid white;
   flex: 1 0 300px;
+  color: white;
   border-radius: 20%;
   border-style: groove;
+}
+.blocflex__article :hover {
+  color: lightgrey;
 }
 
 .blocflex__galerie {
@@ -504,7 +505,7 @@ li{
 }
 
 .main__recherche article {
-  background-color: azure;
+  background-color: black;
   margin: 10px;
 }
 
@@ -539,7 +540,7 @@ li{
   align-items: center;
   text-decoration: none;
   font-variant: small-caps;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: black;
   color: white;
   border-radius: 5px;
   margin: 5px 0;
@@ -568,7 +569,7 @@ li{
 }
 .menu-note-wp-container .menu .menu-item a:hover,
 .menu-cours-container .menu .menu-item a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: black;
 }
 
 .site__footer {
@@ -579,6 +580,8 @@ li{
 .footer__widget {
   display: flex;
   flex-direction: row;
+  margin: 10px;
+  padding: 5px;
 }
 .footer__widget div {
   flex: 1 0 33%;

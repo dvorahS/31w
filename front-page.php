@@ -4,7 +4,13 @@
 */
 get_header() ?>
 <main class="site__main">
-    
+ <section class="viewport">
+    <?php wp_nav_menu(array(
+        "menu"=>"evenement",
+        "container"=>"nav",
+        "container_class"=>"menu__bloc"
+    )); ?>
+</section>
 
     <section class="blocflex">
         <?php 

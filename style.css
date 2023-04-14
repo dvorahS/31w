@@ -363,11 +363,9 @@ h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-P {
+site-mainP {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
   color: white;
-  font-size: 10px;
-  text-align: center;
 }
 
 h1 {
@@ -391,6 +389,15 @@ ul {
 }
 li {
   color: white;
+  list-style: none;
+  text-decoration: none;
+  margin: 10px;
+  padding: 20px;
+  border: 10px solid white;
+  flex: 1 0 300px;
+  color: white;
+  border-radius: 20%;
+  border-style: groove;
 }
 
 p {
@@ -601,6 +608,11 @@ p {
 .footer__lien div {
   flex: 1 0 33%;
 }
+.site__footer > p {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
 
 /* -------------------------- LAYOUT */
 /**
@@ -617,7 +629,16 @@ Mise en page avec display: grid
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
   color: white;
   background-color: black;
- 
+}
+
+.site-main li {
+  margin: 10px;
+  padding: 20px;
+  border: 10px solid white;
+  flex: 1 0 300px;
+  color: white;
+  border-radius: 20%;
+  border-style: groove;
 }
 
 .site__footer {

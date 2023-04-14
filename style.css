@@ -365,6 +365,9 @@ h6 {
 
 P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  color: white;
+  font-size: 10px;
+  text-align: center;
 }
 
 h1 {

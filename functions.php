@@ -62,6 +62,10 @@ add_theme_support( 'custom-logo',
                         'width'  => 150,
                     ) );
 
+add_theme_support('custom-background');   
+
+add_theme_support( 'post-thumbnails' );  
+
 function perso_menu_item_title($title, $item, $args) {
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu  
   
@@ -72,10 +76,15 @@ function perso_menu_item_title($title, $item, $args) {
     $title = "<div class='cours__sigle'>" . $sigle . "</div>" . 
               "<p class='cours__titre'>" . wp_trim_words($title, 2, ' ... ') . "</p>";
     }
+    if($args->menu == 'note-wp') {
+        if (substr($title,0,1) == '0') {
+            $title= substr($title,1);
+        }
+    }
     return  $title ;
 }
 
-add_theme_support( 'post-thumbnails' );
+
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
 
 

@@ -16,9 +16,13 @@
                             'menu'=>'lien-externe-1',
                           'container'=>'nav',
                           'container_class' => 'footer__lien__nav'  )); ?></div>
-    <div><?php ?></div>
-    <div><?php ?></div>
+    <div><?php wp_nav_menu(array(
+    'menu'=>'lien-externe-2',
+    'container'=>'nav',
+    'container_class' => 'footer__lien__nav'  )); ?></div>
+    <br>
 </section>
+<p>© 2023 Deborah Simantob. Tous droits réservés.</p>
 
 
 

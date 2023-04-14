@@ -475,6 +475,10 @@ p {
 .menu-entete-container .menu .menu-item a:hover {
   color: lightgrey;
 }
+.menu-entete-container .menu .menu-item:hover {
+  transform: scale(1.1);
+}
+
 
 .recherche {
   display: flex;

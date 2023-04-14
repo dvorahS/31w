@@ -55,4 +55,4 @@ La pagination globale « layout » du site et les différentes zones de la page:
 ## Liens pertinents
 
 - https://aecweb23.sg-host.com/ 
-- https://github.com/dvorahS/31w/tree/exer4
+- https://github.com/dvorahS/31w/tree/tp2

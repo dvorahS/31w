@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*
-Theme Name: 31w Eddy Martin
+Theme Name: Deborah Simantob
 Theme URI: https://referenced.ca
-Author: Eddy Martin
+Author: Deborah Simantob
 Author URI: https://github.com/eddytuto
 Description: Introductin à la création d'un thème Wordpress
 Version: 1.0
@@ -80,8 +80,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color:black;
-  color: white;
+  background-color:transparent;
+  color: black;
 }
 
 /**
@@ -390,14 +390,14 @@ ul {
 li {
   color: white;
   list-style: none;
-  text-decoration: none;
+  text-decoration: none;/*
   margin: 10px;
   padding: 20px;
   border: 10px solid white;
   flex: 1 0 300px;
   color: white;
   border-radius: 20%;
-  border-style: groove;
+  border-style: groove;*/
 }
 
 p {
@@ -428,6 +428,16 @@ p {
     justify-content: flex-end;
     flex: 1;
   }
+}
+
+
+.erreur_exam{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  
 }
 
 #chkBurger {
@@ -488,8 +498,16 @@ p {
 
 
 .recherche {
+  /*display: flex;*/
+  flex-wrap: nowrap;
+}
+
+.erreur_exam .recherche_erreur{
   display: flex;
   flex-wrap: nowrap;
+  color: red;
+  background-color: blue;
+
 }
 
 .blocflex {
@@ -549,16 +567,16 @@ p {
 }
 .menu-note-wp-container .menu .menu-item a,
 .menu-cours-container .menu .menu-item a {
-  display: flex;
+  /*display: flex;*/
   flex: 1;
-  align-items: center;
+  /*align-items: center;*/
   text-decoration: none;
-  font-variant: small-caps;
+  font-variant: small-caps;/*
   background-color: black;
   color: white;
   border-radius: 5px;
   margin: 5px 0;
-  padding: 3px 5px;
+  padding: 3px 5px;*/
 }
 .menu-note-wp-container .menu .menu-item a .cours__sigle,
 .menu-cours-container .menu .menu-item a .cours__sigle {
@@ -627,9 +645,25 @@ Mise en page avec display: grid
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  color: white;
-  background-color: black;
+  /*color: white;*/
+  background-color: transparent;
+  /*display: flex;*/
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  text-align: center;
 }
+
+.site__main .erreur_exam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site__main .recherche_erreur {
+  margin: 20px 0;
+}
+
 
 .site-main li {
   margin: 10px;
@@ -648,7 +682,7 @@ Mise en page avec display: grid
 
 .site__aside {
   grid-area: aside;
-  background-color: black;
+  /*background-color: black;*/
 }
 
 /* body ou un conteneur globale */

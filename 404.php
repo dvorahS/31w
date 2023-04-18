@@ -5,6 +5,10 @@
 get_header() ?>
 <main class="site__main">
 
+
+
+    <!-- Merci pour ce cours et bonne continuation :-) -->
+
     <section class="erreur_exam">
         <div class="entete_404">
             <h1><span style="color: red;">ERREUR 404</span></h1>

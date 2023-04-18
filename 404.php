@@ -7,8 +7,8 @@ get_header() ?>
 
     <section class="erreur_exam">
         <div class="entete_404">
-            <h1>Erreur 404</h1>
-            <h3>Page introuvable, vous pouvez tenter une recherche.</h3>
+            <h1><span style="color: red;">ERREUR 404</span></h1>
+            <h3><span style="color: red;">Page introuvable, vous pouvez tenter une recherche.</span></h3>
         </div>
 
         <div class="recherche_erreur">
@@ -25,7 +25,7 @@ get_header() ?>
        
        
             <aside class="exam_cours">
-                <h3>Nos choix de cours</h3>
+            <h3><span style="color: red;">Nos choix de cours</span></h3>
                 <?php 
                 $lemenu = "cours";
                 if (in_category('cours')) 
@@ -37,7 +37,7 @@ get_header() ?>
             </aside>
 
             <aside class="exam_cours">
-                <h3>Les notes de cours</h3>
+                <h3><span style="color: red;">Les notes de cours</span></h3>
                 <?php 
                 $lemenu = "note-wp";
                 if (in_category('cours')) 

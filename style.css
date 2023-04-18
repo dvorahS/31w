@@ -440,6 +440,17 @@ p {
   
 }
 
+.exam_cours {
+  display: inline;
+  margin-right: 10px; /* Espacement entre les éléments aside */
+  padding: 10px;
+  margin-bottom: 20px; /* Ajoute de l'espace en bas de l'élément */
+}
+
+.exam_cours:last-child {
+  margin-right: 0;
+}
+
 #chkBurger {
   display: none;
 }
@@ -501,14 +512,14 @@ p {
   /*display: flex;*/
   flex-wrap: nowrap;
 }
-
+/*
 .erreur_exam .recherche_erreur{
   display: flex;
   flex-wrap: nowrap;
   color: red;
   background-color: blue;
 
-}
+}*/
 
 .blocflex {
   display: flex;
@@ -549,16 +560,16 @@ p {
 .menu-note-wp-container .menu,
 .menu-cours-container .menu {
   display: flex;
-  flex: 1;
+  /*flex: 1;*/
   flex-direction: row;
   flex-wrap: wrap;
-}
+} /*
 @media screen and (min-width: 1000px) {
   .menu-note-wp-container .menu,
   .menu-cours-container .menu {
     flex-direction: column;
   }
-}
+}*/
 .menu-note-wp-container .menu .menu-item,
 .menu-cours-container .menu .menu-item {
   list-style-type: none;

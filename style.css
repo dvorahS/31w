@@ -435,7 +435,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /*height: 100vh;*/
   text-align: center;
   
 }
@@ -601,8 +601,27 @@ p {
 }
 .menu-note-wp-container .menu .menu-item a:hover,
 .menu-cours-container .menu .menu-item a:hover {
-  background-color: black;
+  background-color: lightgrey;
 }
+7/*
+.exam_cours ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.exam_cours li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.exam_cours a {
+  color: #333;
+  text-decoration: none;
+}*/
+
+
 
 .site__footer {
   display: flex;

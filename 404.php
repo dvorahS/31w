@@ -22,29 +22,32 @@ get_header() ?>
             </form>
         </div>
 
-        <aside class="site__aside">
-            <h3>Nos choix de cours</h3>
-            <?php 
-            $lemenu = "cours";
-            if (in_category('cours')) 
-            {$lemenu = "cours";}
-            wp_nav_menu(array(
-                "menu" => $lemenu,
-                "container" => "nav"
-            )); ?>
-        </aside>
+       
+       
+            <aside class="exam_cours">
+                <h3>Nos choix de cours</h3>
+                <?php 
+                $lemenu = "cours";
+                if (in_category('cours')) 
+                {$lemenu = "cours";}
+                wp_nav_menu(array(
+                    "menu" => $lemenu,
+                    "container" => "nav"
+                )); ?>
+            </aside>
 
-        <aside class="site__aside">
-            <h3>Les notes de cours</h3>
-            <?php 
-            $lemenu = "note-wp";
-            if (in_category('cours')) 
-            {$lemenu = "cours";}
-            wp_nav_menu(array(
-                "menu" => $lemenu,
-                "container" => "nav"
-            )); ?>
-        </aside>
+            <aside class="exam_cours">
+                <h3>Les notes de cours</h3>
+                <?php 
+                $lemenu = "note-wp";
+                if (in_category('cours')) 
+                {$lemenu = "cours";}
+                wp_nav_menu(array(
+                    "menu" => $lemenu,
+                    "container" => "nav"
+                )); ?>
+            </aside>
+      
 
     </section>
 

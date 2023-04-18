@@ -1,55 +1,37 @@
-# TP2 (25 points)
+# Épreuve finale 31W
 
 Auteur : Deborah Simantob
 
-## L\'objectif du TP2 :
-
-- Créer une page d'accueil interactive utiliser le modèle « front-page.php »
-- Dynamiser la structure de menu mobile actuel
-- Améliorer votre structure de sidebar
-- Améliorer l'apparence du footer
-- Améliorer le modèle category-cours pour synthétiser l'offre de cours
-- Créer quelques modèles et templates
-- Continuer à faire progresser votre thème
-- Améliorer l'extension carrousel
-- Déployer votre projet sur le serveur Siteground
+## : Adapter le modèle 404.php pour reproduire la maquette incluse avec le devis
+## : Durée 3 heures
+## : Pondération 30%
 
 
 
-###### Ce projet vous permettra d'améliorer globalement votre site en y intégrant les éléments suivants:
+### : Description et barème
 
-- Personnalisation de l'affichage d'un cours et de l'affichage d'une note de cours
-- Personnalisation et amélioration des archives (category.php)
-- Amélioration du design et du fonctionnement de l'entête du site
-- Une page d'accueil contenant des blocs annonçant les événements, les nouveaux articles ou tous autres contenus importants du site
+###### Contenu  (15 points)
+-	Titre principal (1 point)
+-	Sous-titre et texte  (1 point)
+-	Une image en arrière plan avec filtre opaque. Vous pouvez choisir votre image (3 points)
+-	Formulaire de recherche fonctionnel et reproduit comme sur la maquette  (3 points)
+-	Le menu wp « cours »  (2 points)
+-	Le menu wp « note-wp » (2 points)
+-	La zone aside n'apparaît pas dans cette page (3 points)
 
-###### Déroulement du projet
-Les « commits » seront poussés dans le dépôt 31w et 31w-extension de votre github dans la branche tp2. L'ensemble des commits devra s'étaler progressivement à partir de la journée de remise du devis jusqu'à la remise finale du TP. Un minimum de 10 commits pour le thème et pour l'extension permettra d'évaluer l'évolution de votre projet
+###### Caractéristiques (10 points)
+-	La page s'adapte à différentes largeurs d'écran (5 points)
+-	La page reproduit fidèlement la maquette (5 points)
 
-###### L'extension carrousel
-Améliorer le design, le niveau d'interactivité et le fonctionnement du carrousel
+###### Git (5 points)
+-	Création de 5 commits. Les commit devront être étalé sur l’ensemble de la durée de l’épreuve (3 heures).  La branche « EF » devra être créée dès le début de l’épreuve, tous les commits seront contenus dans cette branche.  (3 points)
+-	Chaque commit devra contenir un message décrivant simplement l’étape réalisée (1 point)
+-	La branche « EF » contiendra un readme.md avec l’information suivante : (1 point)
+-	Titre
+-	Auteur
+-	Courte description
+-	Lien vers votre site siteground
 
-###### Widget sidebar et footer
-Amélioration de la structure du « sitefooter » et de la zone « siteaside »
-
-###### Design amélioré
-La pagination globale « layout » du site et les différentes zones de la page: l'entête, les sidebars, les menus, le footer et la partie principale « site__main » de la page d'accueil et de toutes les pages devront être bien structurés, claire, originale et entièrement adaptative.
-
-##  Barème de correction sur 25 points
-1. Organisation des commits sur Github minimum 20 commits pour le thème (5 points)
-- Minimum de 20 commits étalé sur deux semaines pour le thème
-- Messages clairs
-- Déploiement de votre site sur Siteground
-- Un readme.md pour le thème et pour l'extension:
-    - Auteur,
-    - Titre du projet,
-    - Description générale
-    - Les éléments que vous avez améliorés
-    - Lien https vers votre site siteground
-2. La page d'accueil contient des blocs annonçant les nouveautés du site. La page est interactive et le design original. Le carrousel amélioré permet d'afficher la galerie de la page d'accueil (5 points)
-3. Organisation du sidebar et du footer, qualité du design et de l’intégration des widgets (5 points)
-4. Design général des pages simples (single.php, page.php, template-parts) et organisation de la programmation Sass, PHP (5 points)
-5. Utilisation des templates de page, les blocs menu avec description et les champs personnalisés (5 points)
 
 
 ## Liens pertinents

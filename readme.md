@@ -2,13 +2,13 @@
 
 Auteur : Deborah Simantob
 
-## : Adapter le modèle 404.php pour reproduire la maquette incluse avec le devis
-## : Durée 3 heures
-## : Pondération 30%
+### Adapter le modèle 404.php pour reproduire la maquette incluse avec le devis
+### Durée 3 heures
+### Pondération 30%
 
 
 
-### : Description et barème
+### Description et barème
 
 ###### Contenu  (15 points)
 -	Titre principal (1 point)
